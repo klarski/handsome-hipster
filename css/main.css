@@ -1,0 +1,27 @@
+body{
+	background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+
+.jumbotron {
+	background-image: url(../images/coffee-hand.jpg);
+	margin-top: -20px;
+	height:540px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+#map {
+	text-align: center;
+}
+
+#world-map {
+	margin: 50px 0 20px 18%;
+}
