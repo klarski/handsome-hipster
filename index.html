@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Handsome Hipster Coffee Roasters</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,18 +26,29 @@
     <script src="jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
     <script src="jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
 
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
 
   </head>
   <body>
 
-    <div class="navbar navbar-inverse">
+    <div class="navbar">
       <div class="container">
         <div class="row">
           <img class="col-md-4" src="images/hhc.svg" alt="Handsome Hipster Logo"/>
           <ul class="nav navbar-nav pull-right">
             <li class="active"><a href="#">HOME</a></li>
+            <li><a href="">COFFEE MAP</a></li>
             <li><a href="">ABOUT</a></li>
-            <li><a href="">COFFEE</a></li>
+            <li><a href="">GALLERY</a></li>
         </ul>
         </div>
       </div>
@@ -45,8 +59,8 @@
       <div class="jumbotron">
          <div class="container">
             <div class="row">
-              <h1>Hello, world!</h1>
-              <p>Authentic seitan sartorial hashtag. Scenester mixtape Vice kale chips chillwave. PBR&B beard pickled vegan. Pop-up typewriter mlkshk irony, chia McSweeney's Wes Anderson next level. Roof party farm-to-table Truffaut blog, street art selfies Tumblr synth organic sartorial Etsy.</p>
+              <h1>We care about Coffee.</h1>
+              <p>Handsome Hipster Coffee Roasters holds very high standards when it comes to the quality of our coffee. All of our beans are Organic and Fair-Trade. Each batch of coffee is roasted by hand. </p>
               <button type="button" class="btn btn-default btn-lg">Check Out Our Coffees</button>
             </div>
           </div>
@@ -55,27 +69,78 @@
       <div class="container">
         <div id="map">
           <h1>Our Coffee Comes from Around the World.</h1>
-          <h3>Check out our interactive map to see where our beans come from.</h3>
-          <div id="world-map" style="width: 750px; height: 500px"></div>
+          <p>Check out our interactive map to see where our beans come from.</p>
+          <div id="world-map" style="width: 900px; height: 600px"></div>
+        </div>
+      </div>
+
+      <div id="about">
+        <div class="container">
+          <h1>About Us</h1>
+          <section>
+            <p class="col-md-6">Handsome Hipster Coffee Roasters was born out of necessity. The necessity of having truly good tasting organic coffee. VHS selfies paleo, seitan small batch disrupt slow-carb cornhole Portland Bushwick Wes Anderson. Semiotics plaid flexitarian, Etsy messenger bag narwhal pug single-origin coffee skateboard Vice 8-bit hella PBR fashion axe. Paleo hashtag sustainable skateboard. Jean shorts organic mumblecore, 90's pickled seitan leggings chia fashion axe tote bag squid PBR&B Helvetica single-origin coffee. Schlitz occupy Portland roof party lo-fi hashtag lomo. High Life cardigan mlkshk wolf 90's.</p>
+            <img class="col-md-6" src="images/owners.jpg">
+          </section>
+        </div>
+      </div>
+
+      <div id="gallery">
+        <div class="container">
+          <h1>The People that make it possible.</h1>
+          <a class="fancybox" rel="group" href="images/1-bg.jpg"><img src="images/1-sm.jpg" alt="" /></a>
+          <a class="fancybox" rel="group" href="images/2-bg.jpg"><img src="images/2-sm.jpg" alt="" /></a>
+          <a class="fancybox" rel="group" href="images/3-bg.jpg"><img src="images/3-sm.jpg" alt="" /></a>
+          <a class="fancybox" rel="group" href="images/4-bg.jpg"><img src="images/4-sm.jpg" alt="" /></a>
         </div>
       </div>
 
 
+      <!-- JVectorMap -->
       <script>
         $('#world-map').vectorMap({
           map: 'world_mill_en',
-          backgroundColor: ['#000000'],
+          color:['#2EC288'],
+          backgroundColor: ['#D6D2C7'],
+          zoomOnScroll: false,
+          zoomButtons : false,
           series: {
             regions: [{
-              // values: gdpData,
               scale: ['#C8EEFF', '#0071A4'],
               normalizeFunction: 'polynomial'
             }]
           },
-          // onRegionLabelShow: function(e, el, code){
-          //   el.html(el.html()+' (GDP - '+gdpData[code]+')');
-          
+          regionStyle:{
+            initial: {
+              fill: '#2EC288',
+              "fill-opacity": 1,
+              stroke: 'none',
+              "stroke-width": 0,
+              "stroke-opacity": 1
+            },
+            hover: {
+              "fill-opacity": 0.5
+            },
+          },
+          markerStyle: {
+            initial: {
+              fill: '#57392E',
+              stroke: '#383f47'
+            }
+          },
+         markers: [
+              {latLng: [9.716667, 38.916667], name: 'Robi Gelan, Ethiopia'},
+              {latLng: [4.5170, -75.699997], name: 'Armenia, Colombia'},
+              {latLng: [1.5900, 103.6100], name: 'Jambi City, Indonesia'},
+              {latLng: [14.5667, -90.7333], name: 'Antigua, Guatemala'}
+            ]
         });
+      </script>
+
+      <!-- FancyBox -->
+      <script type="text/javascript">
+      // $(document).ready(function() {
+        $(".fancybox").fancybox();
+       // });
       </script>
 
 

@@ -1,27 +1,89 @@
 body{
-	background-color: #000;
+	background-color: #D6D2C7;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: 'Vast Shadow', cursive;
+	font-weight: 400;
+	color: #333;
+}
+
+.jumbotron h1{
+	font-size: 3.5em;
+}
+
+
+p, a {
+	font-family: 'Lato', sans-serif;
 	color: #fff;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
 .jumbotron {
 	background-image: url(../images/coffee-hand.jpg);
 	margin-top: -20px;
-	height:540px;
+	height:500px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.navbar {
-	border-radius: 0;
+.jumbotron h1 {
+	color: #333;
+
 }
 
-#map {
+.jumbotron p {
+	color: #fff;
+}
+
+.navbar {
+	border-radius: 0;
+	background-color: #278E7B;
+}
+
+.navbar a {
+	color: #fff;
+	margin-top: 15px;
+	font-size: 1.2em;
+}
+
+.navbar a:hover {
+	border-radius: 5px;
+}
+
+
+#map, #gallery, #about h1 {
 	text-align: center;
 }
 
 #world-map {
-	margin: 50px 0 20px 18%;
+	margin: 50px 0 20px 10%;
 }
+
+#map h1, #about h1 {
+	border-bottom: 1px solid #999;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+#about{
+	/*background-image: url(../images/debut_dark.png);*/
+	background-color: #F2D19B;
+	background-repeat: repeat;
+	padding-bottom: 150px;
+}
+
+#about section {
+	padding-top: 60px;
+}
+
+
+
+
+
+#gallery {
+	background-color: #2EC288;
+}
+
+
