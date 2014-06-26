@@ -26,6 +26,14 @@
     <script src="jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
     <script src="jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
 
+    <!-- Chartjs -->
+    <script src="Chart.js"></script>
+    <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+    <style>
+      canvas{
+      }
+    </style>
+
     <!-- Fancybox -->
     <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
@@ -60,8 +68,11 @@
          <div class="container">
             <div class="row">
               <h1>We care about Coffee.</h1>
-              <p>Handsome Hipster Coffee Roasters holds very high standards when it comes to the quality of our coffee. All of our beans are Organic and Fair-Trade. Each batch of coffee is roasted by hand. </p>
-              <button type="button" class="btn btn-default btn-lg">Check Out Our Coffees</button>
+              <div class="col-md-6">
+                <p>Handsome Hipster Coffee Roasters holds very high standards when it comes to the quality of our coffee. All of our beans are Organic and Fair-Trade. Each batch of coffee is roasted by hand. </p>
+                <button type="button" class="btn btn-default btn-lg">Check Out Our Coffees</button>
+              </div>
+              <object class="col-md-6" type="application/x-shockwave-flash" width="500" height="281" data="https://www.flickr.com/apps/video/stewart.swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-US&photo_secret=c0443b4fe8&photo_id=6739848939&hd_default=false"></param><param name="movie" value="https://www.flickr.com/apps/video/stewart.swf"></param><param name="bgcolor" value="#000000"></param><param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="https://www.flickr.com/apps/video/stewart.swf" bgcolor="#000000" allowfullscreen="true" flashvars="intl_lang=en-US&photo_secret=c0443b4fe8&photo_id=6739848939&hd_default=false" width="500" height="281"></embed></object>
             </div>
           </div>
       </div>
@@ -74,11 +85,28 @@
         </div>
       </div>
 
+      <div id="data">
+        <div class="container">
+          <h1>This is the name</h1>
+          <div id="data1" class="col-md-5">
+            <h3>Amount of Caffine in Different Types of Coffee (By mg)</h3>
+            <canvas id="canvas" height="400" width="500"></canvas>
+          </div>
+          <div id="data2" class="col-md-5">
+            <h3>Top 5 Coffee Consuming Countries by Average of Cups/Day</h3>
+            <canvas id="canvas2" height="400" width="500"></canvas>
+          </div>
+        </div>
+      </div>
+
       <div id="about">
         <div class="container">
           <h1>About Us</h1>
           <section>
-            <p class="col-md-6">Handsome Hipster Coffee Roasters was born out of necessity. The necessity of having truly good tasting organic coffee. VHS selfies paleo, seitan small batch disrupt slow-carb cornhole Portland Bushwick Wes Anderson. Semiotics plaid flexitarian, Etsy messenger bag narwhal pug single-origin coffee skateboard Vice 8-bit hella PBR fashion axe. Paleo hashtag sustainable skateboard. Jean shorts organic mumblecore, 90's pickled seitan leggings chia fashion axe tote bag squid PBR&B Helvetica single-origin coffee. Schlitz occupy Portland roof party lo-fi hashtag lomo. High Life cardigan mlkshk wolf 90's.</p>
+            <div class="col-md-6">
+            <p>Handsome Hipster Coffee Roasters was born out of necessity. The necessity of having truly good tasting organic coffee. VHS selfies paleo, seitan small batch disrupt slow-carb cornhole Portland Bushwick Wes Anderson. Semiotics plaid flexitarian, Etsy messenger bag narwhal pug single-origin coffee skateboard Vice 8-bit hella PBR fashion axe. Paleo hashtag sustainable skateboard.</p>
+            <p>Jean shorts organic mumblecore, 90's pickled seitan leggings chia fashion axe tote bag squid PBR&B Helvetica single-origin coffee. Schlitz occupy Portland roof party lo-fi hashtag lomo. High Life cardigan mlkshk wolf 90's.</p>
+            </div>
             <img class="col-md-6" src="images/owners.jpg">
           </section>
         </div>
@@ -87,12 +115,38 @@
       <div id="gallery">
         <div class="container">
           <h1>The People that make it possible.</h1>
-          <a class="fancybox" rel="group" href="images/1-bg.jpg"><img src="images/1-sm.jpg" alt="" /></a>
-          <a class="fancybox" rel="group" href="images/2-bg.jpg"><img src="images/2-sm.jpg" alt="" /></a>
-          <a class="fancybox" rel="group" href="images/3-bg.jpg"><img src="images/3-sm.jpg" alt="" /></a>
-          <a class="fancybox" rel="group" href="images/4-bg.jpg"><img src="images/4-sm.jpg" alt="" /></a>
+            <div id="images">
+              <a class="fancybox" rel="group" href="images/1-bg.jpg"><img src="images/1-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/2-bg.jpg"><img src="images/2-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/3-bg.jpg"><img src="images/3-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/4-bg.jpg"><img src="images/4-sm.jpg" alt="" /></a>
+            </div>
         </div>
       </div>
+
+      <footer>
+        <div class="container">
+          <div class="col-md-4">
+            <h3>Contact</h3>
+            <p>
+              123 Main Street,</br>
+              Portland, OR </br>
+              (123)867-5309
+
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Social</h3>
+            <a href="">Facebook</a></br>
+            <a href="">Twitter</a></br>
+            <a href="">Instagram</a>
+          </div>
+          <div class="col-md-4">
+            <h3>Image Credits</h3>
+          </div>
+
+        </div>
+      </footer>
 
 
       <!-- JVectorMap -->
@@ -135,6 +189,39 @@
             ]
         });
       </script>
+
+      <!-- data vis -->
+      <script type="text/javascript">
+
+      var barChartData = {
+      labels : ["Espresso","Brewed","Instant","Decaf"],
+      datasets : [
+        {
+          fillColor : "#2EC288",
+          data : [100,135,100,4]
+        },
+      ] 
+      
+      }
+
+      var barChartData2 = {
+      labels : ["Finland","Norway","Iceland","Denmark", "Netherlands"],
+      datasets : [
+        {
+          fillColor : "#278E7B",
+          data : [5.7,3.9,3.5,3.4,3.3]
+        },
+      ] 
+      
+      }
+
+      var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+      var myLine2 = new Chart(document.getElementById("canvas2").getContext("2d")).Bar(barChartData2);
+
+
+       </script>
+
+
 
       <!-- FancyBox -->
       <script type="text/javascript">

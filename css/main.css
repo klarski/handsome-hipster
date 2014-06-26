@@ -2,10 +2,24 @@ body{
 	background-color: #D6D2C7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
 	font-family: 'Vast Shadow', cursive;
 	font-weight: 400;
 	color: #333;
+}
+
+h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: #333;
+
+}
+
+a:hover {
+	color: #333;
+	background-color: #fff;
+	font-weight: 700;
+	text-decoration: none;
 }
 
 .jumbotron h1{
@@ -53,7 +67,7 @@ p, a {
 }
 
 
-#map, #gallery, #about h1 {
+#map, #gallery, #about h1, #data h1 {
 	text-align: center;
 }
 
@@ -61,29 +75,44 @@ p, a {
 	margin: 50px 0 20px 10%;
 }
 
-#map h1, #about h1 {
-	border-bottom: 1px solid #999;
+#map h1, #about h1, #gallery h1, #data h1 {
+	border-bottom: 2px solid #57392E;
 	padding-top: 40px;
 	padding-bottom: 20px;
 }
 
 #about{
-	/*background-image: url(../images/debut_dark.png);*/
 	background-color: #F2D19B;
-	background-repeat: repeat;
 	padding-bottom: 150px;
 }
 
-#about section {
+#about section, #images {
 	padding-top: 60px;
 }
 
-
-
-
-
 #gallery {
 	background-color: #2EC288;
+	padding-bottom: 150px;
 }
 
+footer{
+	background-color: #278E7B;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
 
+#data {
+	background-color: #968680;
+	padding-bottom: 150px;
+}
+
+#data1, #data2 {
+	padding-top: 60px;
+}
+#data1 h3, #data2 h3{
+	text-align: center;
+}
+
+#data1{
+	margin-right: 100px;
+}
