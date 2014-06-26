@@ -20,6 +20,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="js/modernizr.js"></script>
+
     <!-- jVectorMap -->
     <link rel="stylesheet" type="text/css" href="jquery-jvectormap-1.2.2.css">
     <script src="jquery.js"></script>
@@ -51,12 +53,13 @@
     <div class="navbar">
       <div class="container">
         <div class="row">
-          <img class="col-md-4" src="images/hhc.svg" alt="Handsome Hipster Logo"/>
+         <a href="index.html"><img class="col-md-4" src="images/hhc.svg" alt="Handsome Hipster Logo"/></a>
           <ul class="nav navbar-nav pull-right">
-            <li class="active"><a href="#">HOME</a></li>
-            <li><a href="">COFFEE MAP</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">GALLERY</a></li>
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="#map">COFFEE MAP</a></li>
+            <li><a href="#data">COFFEE FACTS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
         </ul>
         </div>
       </div>
@@ -90,11 +93,11 @@
           <h1>This is the name</h1>
           <div id="data1" class="col-md-5">
             <h3>Amount of Caffine in Different Types of Coffee (By mg)</h3>
-            <canvas id="canvas" height="400" width="500"></canvas>
+            <canvas id="canvas" height="400" width="500">Your browser does not support Canvas.</canvas>
           </div>
           <div id="data2" class="col-md-5">
             <h3>Top 5 Coffee Consuming Countries by Average of Cups/Day</h3>
-            <canvas id="canvas2" height="400" width="500"></canvas>
+            <canvas id="canvas2" height="400" width="500">Your browser does not support Canvas.</canvas>
           </div>
         </div>
       </div>
@@ -120,6 +123,10 @@
               <a class="fancybox" rel="group" href="images/2-bg.jpg"><img src="images/2-sm.jpg" alt="" /></a>
               <a class="fancybox" rel="group" href="images/3-bg.jpg"><img src="images/3-sm.jpg" alt="" /></a>
               <a class="fancybox" rel="group" href="images/4-bg.jpg"><img src="images/4-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/5-bg.jpg"><img src="images/5-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/6-bg.jpg"><img src="images/6-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/7-bg.jpg"><img src="images/7-sm.jpg" alt="" /></a>
+              <a class="fancybox" rel="group" href="images/8-bg.jpg"><img src="images/8-sm.jpg" alt="" /></a>
             </div>
         </div>
       </div>
@@ -131,7 +138,7 @@
             <p>
               123 Main Street,</br>
               Portland, OR </br>
-              (123)867-5309
+              (123) 867-5309
 
             </p>
           </div>
@@ -150,6 +157,7 @@
 
 
       <!-- JVectorMap -->
+
       <script>
         $('#world-map').vectorMap({
           map: 'world_mill_en',
@@ -192,6 +200,9 @@
 
       <!-- data vis -->
       <script type="text/javascript">
+      if(Modernizr.canvas){
+        window.onload = function(){
+
 
       var barChartData = {
       labels : ["Espresso","Brewed","Instant","Decaf"],
@@ -217,7 +228,13 @@
 
       var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
       var myLine2 = new Chart(document.getElementById("canvas2").getContext("2d")).Bar(barChartData2);
+      }
 
+      }else {
+        //Canvas not supported
+      }
+
+      console.log(Modernizr);
 
        </script>
 
@@ -225,9 +242,7 @@
 
       <!-- FancyBox -->
       <script type="text/javascript">
-      // $(document).ready(function() {
         $(".fancybox").fancybox();
-       // });
       </script>
 
 
