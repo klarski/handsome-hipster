@@ -15,10 +15,13 @@ h3, h4, h5, h6 {
 
 }
 
-a:hover {
+ul{
+	float: left;
+}
+
+footer a:hover {
 	color: #333;
 	background-color: #fff;
-	font-weight: 700;
 	text-decoration: none;
 }
 
@@ -29,8 +32,8 @@ a:hover {
 
 p, a {
 	font-family: 'Lato', sans-serif;
-	color: #fff;
-	font-size: 1.5em;
+	color: #222;
+	font-size: 1.3em;
 	font-weight: 300;
 }
 
@@ -43,7 +46,7 @@ p, a {
 }
 
 .jumbotron h1 {
-	color: #333;
+	color: #444;
 
 }
 
@@ -72,7 +75,7 @@ p, a {
 }
 
 #world-map {
-	margin: 50px 0 20px 10%;
+	margin: 20px 0 20px 10%;
 }
 
 #map h1, #about h1, #gallery h1, #data h1 {
@@ -115,4 +118,12 @@ footer{
 
 #data1{
 	margin-right: 100px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+video {
+	margin-top: 40px;
 }
